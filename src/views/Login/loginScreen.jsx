@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import {  startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
@@ -9,6 +9,7 @@ import './loginScreen.css'
 export const LoginScreen = () => {
 
     const dispatch = useDispatch();
+    const {loading} = useSelector(state => state.ui);
 
     const [ formValues, handleInputChange] = useForm({
         email: 'wfonseca@betasolutions.tech',
@@ -69,6 +70,7 @@ export const LoginScreen = () => {
                 <button
                   type="submit"
                   className="btn btn-warning w-100 mb-3"
+                  disabled={loading}
                 >
                   Iniciar Sesion
                 </button>
@@ -81,7 +83,7 @@ export const LoginScreen = () => {
                     Ingrear a traves de Google
                 </button>
               </form>
-              <h3 className="text-center text-light">Si no cuenta con una cuenta dark click en regustrarse</h3>
+              <h3 className="text-center text-light">Si no cuenta con una cuenta dark click en registrarse</h3>
               <div className="d-flex justify-content-center w-100">
               <Link to="/auth/register">
                 <button
