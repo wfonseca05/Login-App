@@ -30,7 +30,7 @@ export const LoginScreen = () => {
     return (
         <div className="login">
           <div className="row col-12 d-flex justify-content-end">
-            <div className="col-lg-4 columna">
+            <div className="col-lg-4">
               <h2 className="text-light my-5 text-center">Para poder realizar una reservacion debe iniciar sesión</h2>
               <form className="text-light text-start container" onSubmit={handleLogin}>
                 <div className="mb-3">
@@ -82,17 +82,16 @@ export const LoginScreen = () => {
                     <i className="bi bi-google mx-3"></i>
                     Ingrear a traves de Google
                 </button>
+                <h3 className="text-center text-light">Si no cuenta con una cuenta dark click en registrarse</h3>
+                <Link to="/auth/register">
+                  <button
+                    className="btn btn-success my-3 w-100"
+                  >
+                    Registrarse
+                  </button>
+                </Link>
               </form>
-              <h3 className="text-center text-light">Si no cuenta con una cuenta dark click en registrarse</h3>
-              <div className="d-flex justify-content-center w-100">
-              <Link to="/auth/register">
-                <button
-                  className="btn btn-success my-3"
-                >
-                  Registrarse
-                </button>
-              </Link>
-              </div>
+              
               
             </div>
           </div>

@@ -53,7 +53,7 @@ export const RegisterScreen = () => {
     return (
         <div className="register">
           <div className="row col-12 d-flex justify-content-end">
-            <div className="col-lg-4 columna">
+            <div className="col-lg-4">
               <h2 className="text-light my-5 text-center">Por favor llenar los datos para ingresar correctamente</h2>
               <form className="text-light text-start container" onSubmit={handleRegister}>
              { 
@@ -83,7 +83,7 @@ export const RegisterScreen = () => {
                 </div>
                 <div className="mb-3">
                   <label className="form-label">
-                    <i className="bi bi-person mx-2"></i>
+                  <i className="bi bi-envelope mx-2"></i>
                     Correo Electronico
                   </label>
                   <input
